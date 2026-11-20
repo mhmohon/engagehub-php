@@ -34,7 +34,7 @@ use EngageHub\Resources\Events;
  */
 class EngageHubClient
 {
-    public const VERSION = '0.3.0';
+    public const VERSION = '0.4.0';
 
     private readonly Transport $transport;
 
@@ -134,6 +134,10 @@ class EngageHubClient
             'Accept' => 'application/json',
             'User-Agent' => $this->config->userAgent,
         ];
+
+        if ($this->config->commandUrl !== null && $this->config->commandUrl !== '') {
+            $headers['EngageHub-Command-Url'] = $this->config->commandUrl;
+        }
 
         $body = null;
         $url = $this->config->baseUrl.$path;
