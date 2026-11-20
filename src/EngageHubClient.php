@@ -34,7 +34,7 @@ use EngageHub\Resources\Events;
  */
 class EngageHubClient
 {
-    public const VERSION = '0.4.0';
+    public const VERSION = '0.4.1';
 
     private readonly Transport $transport;
 

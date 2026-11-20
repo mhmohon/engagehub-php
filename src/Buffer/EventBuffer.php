@@ -13,7 +13,7 @@ use EngageHub\Resources\Events;
  */
 class EventBuffer
 {
-    private const int AUTO_FLUSH_AT = 500;
+    private const AUTO_FLUSH_AT = 500;
 
     /** @var list<array<string, mixed>> */
     private array $events = [];

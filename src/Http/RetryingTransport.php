@@ -12,7 +12,7 @@ use EngageHub\Exceptions\NetworkException;
  */
 final class RetryingTransport implements Transport
 {
-    private const int MAX_SLEEP_MS = 8000;
+    private const MAX_SLEEP_MS = 8000;
 
     /** @var callable(int): void */
     private $sleeper;

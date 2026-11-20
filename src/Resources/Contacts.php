@@ -13,7 +13,7 @@ use EngageHub\Exceptions\NotFoundException;
  */
 class Contacts
 {
-    private const int MAX_BATCH = 500;
+    private const MAX_BATCH = 500;
 
     public function __construct(private readonly EngageHubClient $client) {}
 

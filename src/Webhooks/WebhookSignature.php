@@ -18,7 +18,7 @@ use EngageHub\Exceptions\SignatureVerificationException;
  */
 final class WebhookSignature
 {
-    public const int DEFAULT_TOLERANCE = 300;
+    public const DEFAULT_TOLERANCE = 300;
 
     /**
      * Throws when the signature is missing, malformed, wrong, or the
