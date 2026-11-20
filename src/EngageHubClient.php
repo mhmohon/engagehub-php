@@ -34,7 +34,7 @@ use EngageHub\Resources\Events;
  */
 class EngageHubClient
 {
-    public const VERSION = '0.4.1';
+    public const VERSION = '0.5.0';
 
     private readonly Transport $transport;
 
@@ -118,6 +118,20 @@ class EngageHubClient
     public function reportSync(array $report): array
     {
         return $this->request('POST', '/connection/sync-runs', $report);
+    }
+
+    /**
+     * PUT /connection/schema — declare what the app's data means, so EngageHub
+     * can show it without guessing. Meters: a contact attribute that counts
+     * usage, optionally out of another holding each person's allowance.
+     * Replaces what this connection declared before; ['meters' => []] clears it.
+     *
+     * @param  array{meters: list<array{used: string, limit?: string|null, label?: string|null}>}  $schema
+     * @return array<string, mixed>
+     */
+    public function describe(array $schema): array
+    {
+        return $this->request('PUT', '/connection/schema', $schema);
     }
 
     /**

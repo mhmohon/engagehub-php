@@ -63,6 +63,15 @@ $buffer->add(['name' => 'step_completed', 'external_id' => 'user-1']);
 $buffer->flush(); // auto-flushes at 500 too
 ```
 
+Declaring meters (things people use up, from contact attributes you send; skip if your app has none):
+
+```php
+$engagehub->describe(['meters' => [
+    ['used' => 'credits_used', 'limit' => 'credits', 'label' => 'Credits'],
+    ['used' => 'exports'], // no cap
+]]);
+```
+
 ## Verifying EngageHub webhooks
 
 EngageHub signs every outbound webhook with `EngageHub-Signature: t=<unix>,v1=<hex>`,

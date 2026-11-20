@@ -1,7 +1,7 @@
 {
     "name": "engagehub/engagehub-php",
     "description": "Framework-agnostic PHP SDK for pushing events and syncing contacts into an EngageHub workspace.",
-    "version": "0.4.1",
+    "version": "0.5.0",
     "type": "library",
     "license": "MIT",
     "keywords": ["engagehub", "sdk", "analytics", "customer-engagement"],
